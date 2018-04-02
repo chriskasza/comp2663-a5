@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/accounts"
+        android:title="@string/accounts">
+        <!--android:icon="@drawable/ic_help_outline_black_24dp"-->
+    </item>
+    <item
+        android:id="@+id/inventory"
+        android:title="@string/inventory"></item>
+    <item
+        android:id="@+id/rentals"
+        android:title="@string/rentals"></item>
+</menu>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Video Rental System</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="accounts">Accounts</string>
+    <string name="inventory">Inventory</string>
+    <string name="rentals">Rentals</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_account">New Account</string>
+    <string name="search">Search</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="new_movie">New Movie</string>
+    <string name="save">Save</string>
+</resources>
