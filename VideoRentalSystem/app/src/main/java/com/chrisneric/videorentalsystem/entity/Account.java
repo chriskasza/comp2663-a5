@@ -31,7 +31,8 @@ public class Account {
     }
 
     public static Account lookupById(int i) {
-        return getAccountById(i);
+        Account a = getAccountById(i);
+        return a;
     }
 
     public String getAddress() {
@@ -72,5 +73,13 @@ public class Account {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String toString() {
+        return "Account -> uid: \"" + uid +
+                "\", name: \"" + name +
+                "\", address: \"" + address +
+                "\", email: \"" + email +
+                "\", phone: \"" + phone + "\"";
     }
 }

@@ -25,14 +25,29 @@ public abstract class AppDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    public static Account addAccount(Account account) {
+    public static void addAccount(Account account) {
         INSTANCE.accountDao().insertAll(account);
-        return account;
     }
 
     public static Account getAccountById(int i) {
         return INSTANCE.accountDao().findById(i);
     }
+
+    public static Account getLastEntry() {
+        return INSTANCE.accountDao().getLastEntry();
+    }
+
+    public static Account searchAccountByName(String s) {
+        Account a = INSTANCE.accountDao().findByName("%" + s + "%");
+
+        return a;
+//        if(a != null) {
+//            return a;
+//        } else {
+//            return null;
+//        }
+    }
+
     public static void destroyInstance() {
         INSTANCE = null;
     }

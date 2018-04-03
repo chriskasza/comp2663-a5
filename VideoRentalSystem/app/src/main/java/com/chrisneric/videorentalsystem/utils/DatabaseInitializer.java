@@ -16,9 +16,9 @@ public class DatabaseInitializer {
         populateWithTestData(db);
     }
 
-    private static Account addTest(final AppDatabase db, Account user) {
-        db.accountDao().insertAll(user);
-        return user;
+    private static Account addTest(final AppDatabase db, Account account) {
+        db.accountDao().insertAll(account);
+        return account;
     }
 
     private static void populateWithTestData(AppDatabase db) {
@@ -30,6 +30,10 @@ public class DatabaseInitializer {
         addTest(db, account);
 
 //        List<Account> accountList = db.accountDao().getAll();
+//        System.out.println("Rows Count: " + accountList.size());
+//        Account a = db.accountDao().findByName("Chris%");
+//        System.out.println(a.toString());
+
 //        Log.d(DatabaseInitializer.TAG, "Rows Count: " + accountList.size());
     }
 

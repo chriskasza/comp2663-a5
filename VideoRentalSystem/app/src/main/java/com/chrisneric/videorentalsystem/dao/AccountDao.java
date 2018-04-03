@@ -14,11 +14,14 @@ public interface AccountDao {
     @Query("SELECT * FROM account")
     List<Account> getAll();
 
-    @Query("SELECT * FROM account WHERE uid = :id")
+    @Query("SELECT * FROM account WHERE uid = :id LIMIT 1")
     Account findById(int id);
 
     @Query("SELECT * FROM account WHERE name LIKE :name LIMIT 1")
     Account findByName(String name);
+
+    @Query("SELECT * FROM account WHERE uid = (SELECT MAX(uid) FROM account)")
+    Account getLastEntry();
 
     @Insert
     void insertAll(Account... accounts);

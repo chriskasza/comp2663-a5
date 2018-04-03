@@ -1,22 +1,24 @@
 package com.chrisneric.videorentalsystem.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.chrisneric.videorentalsystem.R;
 import com.chrisneric.videorentalsystem.entity.Account;
-
-import static com.chrisneric.videorentalsystem.database.AppDatabase.addAccount;
 
 public class AccountActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Account account = Account.lookupById(getIntent().getIntExtra("accountId",1));
+        int accountId = getIntent().getExtras().getInt("ACCOUNT_ID", 99);
+
+        System.out.println("accountId: " + accountId);
+
+        Account account = Account.lookupById(accountId);
+
+        System.out.println(account.toString());
+
         setContentView(R.layout.activity_account);
 
         TextView name = findViewById(R.id.lblName);

@@ -1,6 +1,5 @@
 package com.chrisneric.videorentalsystem;
 
-import com.chrisneric.videorentalsystem.entity.Account;
 import com.chrisneric.videorentalsystem.entity.Movie;
 
 import org.junit.Test;

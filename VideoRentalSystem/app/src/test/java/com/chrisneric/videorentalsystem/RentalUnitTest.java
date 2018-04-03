@@ -4,7 +4,6 @@ import com.chrisneric.videorentalsystem.entity.Rental;
 
 import org.junit.Test;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
@@ -20,7 +19,7 @@ public class RentalUnitTest {
         int accountId = 1;
         int movieId = 2;
         Date rentedDate = new Date(System.currentTimeMillis());
-        Date dueDate = new Date(System.currentTimeMillis()+259200000);
+        Date dueDate = new Date(System.currentTimeMillis() + 259200000);
 
         Rental a = new Rental(accountId, movieId, rentedDate, dueDate);
 

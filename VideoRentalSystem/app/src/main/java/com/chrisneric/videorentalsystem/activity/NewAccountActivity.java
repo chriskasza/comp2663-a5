@@ -9,6 +9,7 @@ import com.chrisneric.videorentalsystem.R;
 import com.chrisneric.videorentalsystem.entity.Account;
 
 import static com.chrisneric.videorentalsystem.database.AppDatabase.addAccount;
+import static com.chrisneric.videorentalsystem.database.AppDatabase.getLastEntry;
 
 public class NewAccountActivity extends BaseActivity {
 
@@ -19,16 +20,15 @@ public class NewAccountActivity extends BaseActivity {
     }
 
     public void clickSave(View v) {
-//        Account account = createAccount();
-        Account account = addAccount(createAccount());
+        addAccount(buildAccount());
+        Account account = getLastEntry();
+
         Intent i = new Intent(this, AccountActivity.class);
-
-        i.putExtra("accountId", account.getUid());
-
+        i.putExtra("ACCOUNT_ID", account.getUid());
         startActivity(i);
     }
 
-    public Account createAccount() {
+    public Account buildAccount() {
         EditText name = findViewById(R.id.txtName);
         EditText address = findViewById(R.id.txtAddress);
         EditText email = findViewById(R.id.txtEmail);

@@ -7,7 +7,7 @@
     tools:context=".activity.AccountsActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtAccountSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -17,7 +17,6 @@
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
-        android:text="@string/name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,16 +24,17 @@
         app:layout_constraintVertical_bias="0.207" />
 
     <Button
-        android:id="@+id/btnSearch"
+        android:id="@+id/btnAccountSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:onClick="findAccount"
         android:text="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAccountSearch" />
 
     <Button
         android:id="@+id/btnNewAcct"
@@ -42,12 +42,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="72dp"
         android:onClick="openNewAccountActivity"
         android:text="@string/new_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAccountSearch" />
 
 </android.support.constraint.ConstraintLayout>

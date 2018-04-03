@@ -19,6 +19,13 @@ public class Rental {
     @ColumnInfo(name = "due_date")
     private Date dueDate;
 
+    public Rental(int a, int m, Date r, Date d) {
+        accountId = a;
+        movieId = m;
+        rentedDate = r;
+        dueDate = d;
+    }
+
     public int getUid() {
         return uid;
     }
@@ -57,13 +64,6 @@ public class Rental {
 
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
-    }
-
-    public Rental(int a, int m, Date r, Date d) {
-        accountId = a;
-        movieId = m;
-        rentedDate = r;
-        dueDate = d;
     }
 
 //    public static Rental lookupById(int i) {

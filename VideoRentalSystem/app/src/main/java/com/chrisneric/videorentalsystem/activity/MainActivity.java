@@ -6,14 +6,14 @@ import android.view.View;
 
 import com.chrisneric.videorentalsystem.R;
 import com.chrisneric.videorentalsystem.database.AppDatabase;
-import com.chrisneric.videorentalsystem.utils.DatabaseInitializer;
 
 public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DatabaseInitializer.populateSync(AppDatabase.getAppDatabase(this));
+        AppDatabase.getAppDatabase(this);
+//        DatabaseInitializer.populateSync(AppDatabase.getAppDatabase(this));
         setContentView(R.layout.activity_main);
     }
 
